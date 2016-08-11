@@ -1,10 +1,12 @@
 [user]
-	name = Chris Pinola
-	email = chris@pinola.co
+	name = Christopher Pinola
+	email = cpinola@acats.com
 [core]
 	autocrlf = True
+	excludesfile = C:\\Users\\cpinola\\Documents\\gitignore_global.txt
 	preloadindex = true
 	fscache = true
+	pager = less -S
 [alias]
 	logp = log --all --graph --oneline --decorate
 	logsummerge = log -m --first-parent
@@ -23,19 +25,24 @@
 	aa = add --all
 	ap = add -p
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
-	lga = log --graph --all --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 	di = diff
 	ds = diff --staged
 	ai = add -i
+	rh = --unset
 	rsh = reset --hard
 	sup = log HEAD..FETCH_HEAD
 	mg = merge --no-ff --log
-	up = pull --ff-only
 [push]
 	default = simple
 [gc]
 	auto = 256
+[http]
+	postBuffer = 524288000
+[credential]
+	helper = store
 [diff]
 	compactionHeuristic = true
+	guitool = kdiff3
 [merge]
+	tool = tortoisemerge
 	conflictstyle = diff3
