@@ -32,7 +32,7 @@
 	rsh = reset --hard
 	sup = log HEAD..FETCH_HEAD
 	mg = merge --no-ff --log
-	up = pull --ff-only
+	up = merge --ff-only
 [push]
 	default = simple
 [gc]
