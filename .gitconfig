@@ -1,0 +1,41 @@
+[user]
+	name = Chris Pinola
+	email = chris@pinola.co
+[core]
+	autocrlf = True
+	preloadindex = true
+	fscache = true
+[alias]
+	logp = log --all --graph --oneline --decorate
+	logsummerge = log -m --first-parent
+	st = status
+	co = checkout
+	cob = checkout -b
+	rbi = rebase -i
+	rbc = rebase --continue
+	rba = rebase --abort
+	shn = show HEAD --numstat
+	br = branch
+	brm = branch --merged
+	brnm = branch --no-merged
+	la = !git config -l | grep alias | cut -c 7- | sort
+	fa = fetch -v --all --prune
+	aa = add --all
+	ap = add -p
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	lga = log --graph --all --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	di = diff
+	ds = diff --staged
+	ai = add -i
+	rsh = reset --hard
+	sup = log HEAD..FETCH_HEAD
+	mg = merge --no-ff --log
+	up = pull --ff-only
+[push]
+	default = simple
+[gc]
+	auto = 256
+[diff]
+	compactionHeuristic = true
+[merge]
+	conflictstyle = diff3
