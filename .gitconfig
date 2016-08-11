@@ -25,13 +25,14 @@
 	aa = add --all
 	ap = add -p
 	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+	lga = log --graph --all --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
 	di = diff
 	ds = diff --staged
 	ai = add -i
-	rh = --unset
 	rsh = reset --hard
 	sup = log HEAD..FETCH_HEAD
 	mg = merge --no-ff --log
+	up = pull --ff-only
 [push]
 	default = simple
 [gc]
